@@ -1,4 +1,3 @@
-/* CSS styles for the personal website */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -39,12 +38,6 @@ body {
     align-items: center;
   }
   
-  img {
-    width: 40%; /* Adjust the width as needed */
-    border-radius: 10%;
-    margin-bottom: 10px;
-  }
-  
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +50,7 @@ body {
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 5px;
-    box-sizing: border-box; /* Include padding and border in the box size calculation */
+    box-sizing: border-box; 
   }
   
   
@@ -67,6 +60,13 @@ body {
     padding: 10px;
     border-radius: 5px;
   }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px; 
+   }
   
   footer {
     background-color: #f4f4f4;
