@@ -18,20 +18,20 @@ header {
   padding-bottom: 20px;
 }
 
+.orange-text {
+  color: orange;
+}
+
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color:darkblue;
+  font-size: 2.9rem;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 main {
-  max-width: 800px;
   margin: 0 auto;
 }
 
-section {
-  margin-bottom: 30px;
-}
 
 h2 {
   font-size: 1.8rem;
@@ -52,6 +52,69 @@ h2 {
   flex: 1;
 }
 
+.intro-text-container {
+  flex: 1;
+  width: 30vw;
+  background-color: rgba(255, 255, 255, 0.7); /* Use rgba with alpha value for transparency */
+  padding: 10px; /* Add some padding to improve readability */
+  border-radius: 5px;
+}
+
+/* Existing styles for other sections... */
+
+#about-me{
+  position: relative; /* Make the container position-relative */
+}
+
+#internships{
+  position: relative; /* Make the container position-relative */
+}
+
+#research{
+  position: relative; /* Make the container position-relative */
+}
+
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/good_np.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1; /* Send the background image container to the back */
+}
+
+.intern-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/intern_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;/* Send the background image container to the back */
+}
+
+.research-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #faf7ec;
+  z-index:-1;
+}
+
+.content-container {
+  max-width: 800px; /* Set the maximum width for the text content */
+  margin: 0 auto;
+  padding: 10px; /* Add some padding to separate the content from the background edges */ /* Add a semi-transparent background to the content container for better readability */
+}
 .text-container {
   flex: 1;
 }
@@ -59,23 +122,16 @@ h2 {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card {
   flex-basis: calc(33.33% - 20px);
-  margin-bottom: 20px;
+  margin: 5px;
   background-color: #f2f2f2;
   padding: 10px;
   border-radius: 5px;
   box-sizing: border-box;
-}
-
-.teaching-experience {
-  margin-bottom: 20px;
-  background-color: #f2f2f2;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 .card img {
@@ -85,10 +141,22 @@ h2 {
   border-radius: 5px;
 }
 
-footer {
-  background-color: #f4f4f4;
-  text-align: center;
+.card h3 {
+  margin-top: 7px;
+}
+
+.teaching-experience {
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
   padding: 10px;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #ffcc80;
+  font-size:2%;
+  text-align: center;
+  padding: 5px;
   position: fixed;
   bottom: 0;
   left: 0;

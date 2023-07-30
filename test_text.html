@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Revealable Paragraph</title>
+</head>
+<body>
+  <p id="revealable" onclick="revealContent()">Warning: terrible pun ahead</p>
+
+  <script>
+    function revealContent() {
+      const revealableParagraph = document.getElementById("revealable");
+      const originalText = "Warning: terrible pun ahead";
+      const newText = "BAMage: Bacteria, Antibiotics, Microbiome";
+
+      if (revealableParagraph.textContent === originalText) {
+        revealableParagraph.textContent = newText;
+      } else {
+        revealableParagraph.textContent = originalText;
+      }
+    }
+  </script>
+</body>
+</html>
