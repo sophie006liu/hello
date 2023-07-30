@@ -62,17 +62,11 @@ h2 {
 
 /* Existing styles for other sections... */
 
-#about-me{
+section{
   position: relative; /* Make the container position-relative */
 }
 
-#internships{
-  position: relative; /* Make the container position-relative */
-}
 
-#research{
-  position: relative; /* Make the container position-relative */
-}
 
 .background-image-container {
   position: absolute;
@@ -108,6 +102,19 @@ h2 {
   height: 100%;
   background-color: #faf7ec;
   z-index:-1;
+}
+
+.hackathon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/hackathon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;/* Send the background image container to the back */
 }
 
 .content-container {
