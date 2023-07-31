@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sophie's Professional Website</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" ></script>
 </head>
 <body>
   <header align="center">
-    <h1 >Sophie Liu</h1>
+    <h1> Hi there!  Nice to meet you :D </h1>
     <div align="center" class="intro-container">
       <div class="image-container">
         <img style="width:30vw; border-radius: 10%;" src="./images/happy_picture.jpg" alt="Your Picture">
       </div>
       <div class="intro-text-container">
-        <p > <span class="orange-text">Hi there!  Nice to meet you :D</span> 
-          Welcome to my personal website! </p>
+        <p style="font-size:1.5vw"> <span class="orange-text"> Welcome to my personal website! </span> </p>
         <p>
           My name is Sophie Liu, and I am so glad you stopped by! I think you're here 
           to get to know me better (maybe I'll get to meet you someday too :)), 
@@ -32,14 +32,14 @@
   <main>
     <section id="about-me">
       <div class="background-image-container"></div>
-      <div class="content-container" style="background-color: rgba(187, 222, 251, 0.8);">
-        <h2>A Little About My Professional Interests</h2>
+      <div class="content-container" style="background-color: rgba(187, 222, 251, 0.9); color:rgb(4, 39, 88)"">
+        <h2 >A Little About My Professional Interests</h2>
         <p>  
-          After I graduate, I hope to contribute fundamental improvements to the world of computational biology by creating 
+          After I graduate, I will contribute fundamental improvements to the world of computational biology by creating 
           the tools that other scientists use to advance their research. 
         </p>
         <p>
-          Some tasks that would speak to my interests would include: coming up with a more cost-effective and effecient way to sequence proteins, 
+          Some tasks that speak to my interests include: developing novel algorithms for high-throughput protein sequencing, 
           redefining how we simulate/predict protein dynamics and structure, discovering new underlying rules behind cell signal transduction through simulation, 
           and developing more accessible and intuitive <em>de novo</em> protein design pipelines.
         </p>
@@ -60,15 +60,66 @@
           <div class="card">
             <h3>Amgen 2023</h3>
             <p>Topics: AWS Cloud computing, Full Stack, IgFold, Protein Folding, Generative AI</p>
+            <div class="hidden-content expanded-card-content">
+              I am currently an intern at Amgen working on four projects. 
+              <ul>
+                <li>The first project involves creating an Amazon Machine Image for the Molecular modeling team.
+                  By constructing the packer and ansible playbook I am learning a lot about
+                  <span class="orange-text">AWS and cloud infrastructure and software configuration</span> 
+                  as I try to add all the necessary add-ons to the AMI.        
+                </li>
+                <li>The second project involves more full stack responsibilties to make an internal 
+                  webapp that allows users to submit arxiv papers, ask questions about the paper,
+                   and recieve technically detailed and accurate answers. Doing this I have become 
+                   proficient with <span class="orange-text">LangChain</span>, a framework for development
+                   using language models,<span class="orange-text"> OpenAI api, React, Node.js, Flask,</span> and 
+                   <span class="orange-text"> website deployment on AWS. </span>
+                </li>
+                <li>The third task pertains to <span class="orange-text">setting up a pipeline that allows scientists to predict the structure of 
+                  antibodies</span>. My task was to take state of the start antibody folding scripts and write the necessary shell, 
+                  python, and dockerfiles to create a scalable pipeline for folding single or multiple antibodies.
+                </li>
+                <li>
+                  My final project involves creating a standard test that the company can use to benchmark the performance
+                  of protein folding tools existing or new. With this procedure, the company can carefully evaluate newly released  
+                  protein folding resources to see if they are worth incorporating. <span class="orange-text">This task effectively sets the stage for all downstream molecular
+                  simulations done on potential drug targets.</span>
+                </li>
+              </ul>  
+            </div>
           </div>
           <div class="card">
               <h3>Peptilogics 2022</h3> 
               <p>Topics:Peptide Folding, PyRosetta, Rosetta, Ab Initio Folding</p>
+              <div class="hidden-content expanded-card-content">
+                During the summer going into my junior year, I had the privilege of working at Peptilogics, a 
+                company focused on peptide-based theraputics.
+                <ul>
+                  <li>The first project was to take in custom information encoded on a PDB file, and display it in the
+                    log of a molecular visualization program called ChimeraX. The code was written in python using the 
+                    chimerax.core.commands library, and enabled simulation scientists to have a cleaner view of their desired
+                    data from an ensemble PDB. 
+                  </li>
+                  <li>The second project also involved adding commands to ChimeraX. My task was to create a command that allows
+                    scientists to color PDB residues based on custom attributes besides b-factors like Rosetta Energy Score. </span>
+                  </li>
+                  <li>The third task was to create a peptide folding pipeline for the company using the <em>ab initio</em> script on 
+                    Rosetta. I learned how to use the pyRosetta python library, Rosetta suite, python, and bash scripting to make 
+                    pipelines to fold peptides in batch. To measure our performance, we used the RMSD and pandas, numpy toolkits to
+                    compare against industry standards Alphafold and PEPFOLD. My custom parameters and procedure was able to outperform
+                    both programs in the use case of peptides, and now is now being used by the company in their drug discovery pipeline.
+                  </li>
+                </ul> 
+                <img src="./images/peptilogics.jpeg" alt="Peptilogics Picture">
+              </div>
           </div>
         </div>
       </div>
+      <div class="expanded-container">
+        <div class="expanded-card"></div>
+      </div> 
     </section>
-
+    
     <section id="research">
       <div class="research-bg-container"></div>
       <div class="content-container">
@@ -79,40 +130,46 @@
               <h3>Bahar Lab (Undergrad)</h3>
               <p>Characterizing GPCR Binding Sites </p>
               <p>Topics: GPCRs, Protein Dynamics, pandas, numpy, shell scripting </p>
-            </div>
+              <div class="hidden-content">Hidden</div>
+          </div>
         
-            <div class="card">
-              <h3>Kaeberlein Lab (HS)</h3>
-              <p> Introduction to <em>C. elegans</em>, first academic lab position</p>
-              <p>Topics: Alzheimer's disease, analyzing C. elegans thrashing patterns</p>
-            </div>
+          <div class="card">
+            <h3>Kaeberlein Lab (HS)</h3>
+            <p> Introduction to <em>C. elegans</em>, first academic lab position</p>
+            <p>Topics: Alzheimer's disease, analyzing C. elegans thrashing patterns</p>
+            <div class="hidden-content">Hidden</div>
+          </div>
         
-            <div class="card">
-              <h3>Institute for Systems Biology (HS)</h3>
-              <p>"BAMage: Bacteria, Antibiotics, Microbiome" (I came up with the name in high school.)</p>
-              <p>
-                Topics: Intro. Python, Biological Modeling, Microbiome, Antibiotics, Evolution
-              </p>
-            </div>
+          <div class="card">
+            <h3>Inst. for Systems Biology (HS)</h3>
+            <p>"BAMage: Bacteria, Antibiotics, Microbiome" (Please pardon HS Sophie)</p>
+            <p> Topics: Intro. Python, Biological Modeling, Microbiome, Antibiotics, Evolution </p>
+            <div class="hidden-content">Hidden</div>
+          </div>
 
-            <div class="card">
-              <h3>iGEM 2019 (HS)</h3>
-              <p>Spatially Controlling attachment of Functional Proteins on 
-                Bacterial Cellulose using Optogenetics</p>
-              <p>
-                Topics: Benchling, Student led research, Biological Modeling using ODEs and PDes
-              </p>
-            </div>
+          <div class="card">
+            <h3>iGEM 2019 (HS)</h3>
+            <p>Spatially Controlling attachment of Functional Proteins on 
+              Bacterial Cellulose using Optogenetics</p>
+            <p>
+              Topics: Benchling, Student led research, Biological Modeling using ODEs and PDes
+            </p>
+            <div class="hidden-content">Hidden</div>
+          </div>
 
-            <div class="card">
-              <h3>iGEM 2018 (HS)</h3>
-              <p>A Synthetic Biology Alternative to the LAL Endotoxin Detection Assay</p>
-              <p>
-                Topics: benchling, bacteria, gfp, student led research, igem, boston, rosetta
-              </p>
-            </div>
+          <div class="card">
+            <h3>iGEM 2018 (HS)</h3>
+            <p>A Synthetic Biology Alternative to the LAL Endotoxin Detection Assay</p>
+            <p>
+              Topics: benchling, bacteria, gfp, student led research, igem, boston, rosetta
+            </p>
+            <div class="hidden-content">Hidden</div>
+          </div>
         </div>
       </div>
+      <div class="expanded-container">
+        <div class="expanded-card"></div>
+      </div> 
     </section>
 
     <section id="hackathons">
@@ -128,6 +185,7 @@
               <p>
                 Awards: Design for America (DFA) Prize for Best Social Impact Project
               </p>
+              <div class="hidden-content">Hidden</div>
             </div>
 
             <div class="card">
@@ -138,6 +196,7 @@
               <p>
                 Awards: Finalist in Overall Competition, Third Place
               </p>
+              <div class="hidden-content">Hidden</div>
             </div>
             <div class="card">
               <h3>CMU Hack 112</h3>
@@ -147,9 +206,15 @@
               <p>
                 Awards: Most Social Impact, Runner Up: Most Interdisciplinary Project
               </p>
+              <div class="hidden-content">Hidden</div>
             </div>
         </div>
       </div>
+      <div class="expanded-container">
+        <div class="expanded-card"></div>
+        <div class="expanded-card"></div>
+        <div class="expanded-card"></div>
+      </div> 
     </section>
 
     <section id="teaching">
@@ -199,8 +264,12 @@
         </div>
       </br>
       </div>
+      <div class="expanded-container">
+        <div class="expanded-card"></div>
+      </div> 
     </section>
   </main>
+
 
   <footer>
     <p>&copy; 2023 Sophie Liu. </p>

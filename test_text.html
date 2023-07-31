@@ -1,23 +1,107 @@
 <!DOCTYPE html>
 <html>
+
+
+
 <head>
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      flex-basis: calc(33.33% - 20px);
+      margin: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .expanded-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      overflow: auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .expanded-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+      color: #333;
+    }
+
+    .expanded-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hidden-content {
+      display: none;
+    }
+  </style>
   <title>Revealable Paragraph</title>
 </head>
 <body>
-  <p id="revealable" onclick="revealContent()">Warning: terrible pun ahead</p>
+  <div class="card-container">
+    <div class="card"> 
+      <h3>Card 1 Title</h3>
+      <p>Card 1 Content</p>
+      <p class="hidden-content">1</p>
+    </div>
+    <div class="card"> 
+      <h3>Card 2 Title</h3>
+      <p>Card 2 Content</p>
+      <p class="hidden-content">2</p>
+    </div>
+    <!-- Add more cards here -->
+  </div>
+  
+  <!-- Expanded view container -->
+  <div class="expanded-container"> 
+  </div>
 
   <script>
-    function revealContent() {
-      const revealableParagraph = document.getElementById("revealable");
-      const originalText = "Warning: terrible pun ahead";
-      const newText = "BAMage: Bacteria, Antibiotics, Microbiome";
+    // Get references to the card elements and the expanded view container
+    // Get references to the card elements and the expanded view container
+    const cards = document.querySelectorAll(".card");
+    const expandedContainer = document.querySelector(".expanded-container");
 
-      if (revealableParagraph.textContent === originalText) {
-        revealableParagraph.textContent = newText;
-      } else {
-        revealableParagraph.textContent = originalText;
-      }
-    }
+    // Add click event listener to each card
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        // Clone the clicked card's content and append it to the expanded view container
+        const expandedCard = card.cloneNode(true);
+        expandedContainer.innerHTML = "";
+        expandedContainer.appendChild(expandedCard);
+
+        // Show the expanded view container
+        expandedContainer.style.display = "block";
+
+        // Get the hidden content element in the expanded view
+        const hiddenContent = expandedContainer.querySelector(".hidden-content");
+
+        // Show the hidden content in the expanded view
+        hiddenContent.style.display = "block";
+
+        // Add a click event listener to the expanded view to close it when clicked
+        expandedContainer.addEventListener("click", () => {
+          expandedContainer.style.display = "none";
+        });
+      });
+    }); 
   </script>
 </body>
 </html>
