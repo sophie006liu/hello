@@ -11,7 +11,7 @@ main {
 }
 
 header {
-  background-image: url("images/background.png");
+  background-image: url("images/blue_orange_clouds.png");
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
@@ -29,7 +29,7 @@ header {
 h1 {
   font-size: 2.9rem;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #6d9cee;
 }
 
 h2 {
@@ -117,7 +117,7 @@ section{
 }
 
 .content-container {
-  max-width: 75%; /* Set the maximum width for the text content */
+  max-width: 65%; /* Set the maximum width for the text content */
   margin: 0 auto;
   padding: 10px; /* Add some padding to separate the content from the background edges */ /* Add a semi-transparent background to the content container for better readability */
   color:rgb(1, 53, 93);
