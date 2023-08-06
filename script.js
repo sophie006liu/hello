@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    expandedContainer.addEventListener("click", () => {
+    expandedContainer.addEventListener("dblclick", () => {
       // Hide the expanded view container when clicking outside the expanded card
       expandedContainer.style.display = "none";
     });
